@@ -1,0 +1,10 @@
+#!/bin/bash
+
+cp /var/log/syslog ~/github/
+
+# Appends syslog copy in current directory with current date/time
+
+time
+'date' >> syslog
+
+# End
