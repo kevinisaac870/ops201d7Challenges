@@ -4,7 +4,7 @@ cp /var/log/syslog ~/github/
 
 # Appends syslog copy in current directory with current date/time
 
-time
+'time' >> syslog
 'date' >> syslog
 
 # End
