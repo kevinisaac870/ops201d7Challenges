@@ -3,7 +3,7 @@
 # Script:                       Ops Challenge 10
 # Author:                       Kevin Isaac
 # Date of latest revision:      20221222
-# Purpose:     Using Pyhton to ammend a *.txt file
+# Purpose:     Using Pyhton to amend a *.txt file
 
 
 # Importing Python OS
