@@ -17,22 +17,22 @@
 # Use a loop to bring up the menu again after the request has been executed.
 
 PS3='Please enter your choice: '
-options=("Choice 1" "Choice 2" "Choice 3" "Exit")
+options=("Option 1" "Option 2" "Option 3" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
-        "Choice 1")
+        "Option 1")
             echo "Hello World!"
             ;;
-        "Choice 2")
+        "Option 2")
             echo "Ping 127.0.0.1"
             ping '127.0.0.1'
             ;;
-        "Choice 3")
+        "Option 3")
             echo "IP info"
             ip a
             ;;
-        "Exit")
+        "Quit")
             break
             ;;
         *) echo "invalid option $REPLY";;
