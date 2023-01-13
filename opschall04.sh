@@ -5,6 +5,8 @@
 # Date of latest revision:      20221215
 # Purpose:      Change file/user permissions with a shell script
 
+# Attribution: Class Zoom video, classmates and https://www.thegeekstuff.com/2008/09/bash-shell-take-control-of-ps1-ps2-ps3-ps4-and-prompt_command/
+
 # Create a bash script that launches a menu system with the following options:
 # Hello world (prints “Hello world!” to the screen)
 # Ping self (pings this computer’s loopback address)
@@ -14,17 +16,27 @@
 # The program should next use a conditional statement to evaluate the user’s input, then act according to what the user selected.
 # Use a loop to bring up the menu again after the request has been executed.
 
-msg="Please select from below menu"
+PS3='Please enter your choice: '
+options=("Option 1" "Option 2" "Option 3" "Quit")
+select opt in "${options[@]}"
+do
+    case $opt in
+        "Option 1")
+            echo "Hello World!"
+            ;;
+        "Option 2")
+            echo "Ping 127.0.0.1"
+            ping '127.0.0.1'
+            ;;
+        "Option 3")
+            echo "IP info"
+            ip a
+            ;;
+        "Quit")
+            break
+            ;;
+        *) echo "invalid option $REPLY";;
+    esac
+done
 
-echo $message
-    select $opt in "Print 'Hello World'" "Ping Self" "IP Info" "Exit" ; do
-            case $opt in
-                "Print 'Hello World'" ) echo "Hello World" && echo -e "/n$again" ;;
-                "Ping Self" ) ping 127.0.0.1 -c 3 && echo -e "/n$again" ;;
-                "IP Info" ) ls -a   ;;
-                "Exit" ) echo "Good Bye"; break;
-            esac
-            REPLY=
-        done
-
-# end
+# End
