@@ -27,3 +27,5 @@ print(ip_a_output)
 print(lshw_ouput)
 
 # End
+
+# Attribution: Class Zoom video and collaboration with classmates
