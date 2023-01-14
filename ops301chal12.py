@@ -5,7 +5,7 @@
 # Date of latest revision:      20221228
 # Purpose:      Python Requests Library
 
-# Attribution: Class Zoom video and collaboration with classmates.  I had assistance on this from classmates.
+# Attribution: Class Zoom video and collaboration with classmates.  I had assistance from Jose Cordozo on this.
 
 # First step is to install the requests library
 import requests
